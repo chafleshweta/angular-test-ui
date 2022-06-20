@@ -1,0 +1,45 @@
+<div class="m-4">
+    <button [routerLink]="['/studentForm']" class="btn btn-outline-primary">
+       <i class="bi bi-plus"></i> ADD
+    </button>
+</div>
+
+<div class="m-4">
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th>First Name</th>
+                <th>Middle Name</th>
+                <th>Last Name</th>
+                <th>Gender</th>
+                <th>Birthday</th>
+                <th>City</th>
+                <th>State</th>
+                <th>Country</th>
+                <th>Zip</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let student of studentService.allStudent">
+                <td>{{student.firstname}}</td>
+                <td>{{student.middlename}}</td>
+                <td>{{student.lastname}}</td>
+                <td>{{student.gender}}</td>
+                <td>{{student.birthdate}}</td>
+                <td>{{student.city}}</td>
+                <td>{{student.state}}</td>
+                <td>{{student.country}}</td>
+                <td>{{student.zip}}</td>
+                <td>
+                    <a (click)="editStudent(student)" class="text-primary btn">
+                        <i class="bi bi-pen-fill"></i>
+                    </a>
+                    <a (click)="deleteStudent(student.id)" class="text-danger btn">
+                        <i class="bi bi-trash"></i>
+                    </a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

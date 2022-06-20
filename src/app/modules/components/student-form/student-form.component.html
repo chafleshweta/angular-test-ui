@@ -1,0 +1,81 @@
+<!-- {{studentService.currentStudent | json}} -->
+
+<div class="row m-4">
+    <div class="col-md-3">
+        <mat-form-field class="w-100">
+            <mat-label>firstName</mat-label>
+            <input matInput placeholder="first name" [(ngModel)]="studentService.currentStudent.firstname">
+        </mat-form-field>
+    </div>
+
+    <div class="col-md-3">
+        <mat-form-field class="w-100">
+            <mat-label>middleName</mat-label>
+            <input matInput placeholder="middle name" [(ngModel)]="studentService.currentStudent.middlename">
+        </mat-form-field>
+    </div>
+
+    <div class="col-md-3">
+        <mat-form-field class="w-100">
+            <mat-label>lastName</mat-label>
+            <input matInput placeholder="last name" [(ngModel)]="studentService.currentStudent.lastname">
+        </mat-form-field>
+    </div>
+
+    <div class="col-md-3">
+        <mat-form-field class="w-100">
+            <mat-label>gender</mat-label>
+            <input matInput placeholder="gender" [(ngModel)]="studentService.currentStudent.gender">
+        </mat-form-field>
+    </div>
+</div>
+
+<div class="row m-4">
+    <div class="col-md-3">
+        <mat-form-field class="w-100">
+            <mat-label>birthday</mat-label>
+            <input matInput placeholder="birthday" [(ngModel)]="studentService.currentStudent.birthdate">
+        </mat-form-field>
+    </div>
+
+    <div class="col-md-3">
+        <mat-form-field class="w-100">
+            <mat-label>city</mat-label>
+            <input matInput placeholder="city" [(ngModel)]="studentService.currentStudent.city">
+        </mat-form-field>
+    </div>
+
+    <div class="col-md-3">
+        <mat-form-field class="w-100">
+            <mat-label>state</mat-label>
+            <input matInput placeholder="state" [(ngModel)]="studentService.currentStudent.state">
+        </mat-form-field>
+    </div>
+
+    <div class="col-md-3">
+        <mat-form-field class="w-100">
+            <mat-label>country</mat-label>
+            <input matInput placeholder="country" [(ngModel)]="studentService.currentStudent.country">
+        </mat-form-field>
+    </div>
+</div>
+
+<div class="row m-4">
+    <div class="col-md-3">
+        <mat-form-field class="w-100">
+            <mat-label>zip</mat-label>
+            <input matInput placeholder="zip" [(ngModel)]="studentService.currentStudent.zip">
+        </mat-form-field>
+    </div>
+</div>
+
+<div class="row col-md-6 m-4">
+    <div class="col-md-6">
+        <button mat-raised-button color="primary" class="w-100"
+            (click)="save(studentService.currentStudent)">SAVE</button>
+    </div>
+
+    <div class="col-md-6">
+        <button mat-raised-button color="yellow" (click)="clear()" class="w-100">CLEAR</button>
+    </div>
+</div>
