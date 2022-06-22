@@ -1,81 +1,129 @@
 <!-- {{studentService.currentStudent | json}} -->
+<div class="row" m-5 p-5 border-primary>
+    <form [formGroup]="studentForm">
+        <div class="row m-4">
+            <div class="col-md-3">
+                <mat-form-field class="w-100">
+                    <mat-label>firstName</mat-label>
+                    <input matInput placeholder="first name" formControlName="firstname"
+                        [(ngModel)]="studentService.currentStudent.firstname">
+                </mat-form-field>
+                <span *ngIf="studentForm.get('firstname')?.invalid && studentForm.get('firstname')?.touched"
+                    class="text-danger">
+                    Please Enter First Name
+                </span>
+            </div>
 
-<div class="row m-4">
-    <div class="col-md-3">
-        <mat-form-field class="w-100">
-            <mat-label>firstName</mat-label>
-            <input matInput placeholder="first name" [(ngModel)]="studentService.currentStudent.firstname">
-        </mat-form-field>
-    </div>
+            <div class="col-md-3">
+                <mat-form-field class="w-100">
+                    <mat-label>middleName</mat-label>
+                    <input matInput placeholder="middle name" formControlName="middlename"
+                        [(ngModel)]="studentService.currentStudent.middlename">
+                </mat-form-field>
+                <span *ngIf="studentForm.get('middleName')?.invalid && studentForm.get('middleName')?.touched"
+                    class="text-danger">
+                    Please Enter middleName
+                </span>
+            </div>
 
-    <div class="col-md-3">
-        <mat-form-field class="w-100">
-            <mat-label>middleName</mat-label>
-            <input matInput placeholder="middle name" [(ngModel)]="studentService.currentStudent.middlename">
-        </mat-form-field>
-    </div>
+            <div class="col-md-3">
+                <mat-form-field class="w-100">
+                    <mat-label>lastName</mat-label>
+                    <input matInput placeholder="last name" formControlName="lastname"
+                        [(ngModel)]="studentService.currentStudent.lastname">
+                </mat-form-field>
+                <span *ngIf="studentForm.get('lastname')?.invalid && studentForm.get('lastname')?.touched"
+                    class="text-danger">
+                    Please Enter last Name
+                </span>
+            </div>
 
-    <div class="col-md-3">
-        <mat-form-field class="w-100">
-            <mat-label>lastName</mat-label>
-            <input matInput placeholder="last name" [(ngModel)]="studentService.currentStudent.lastname">
-        </mat-form-field>
-    </div>
+            <div class="col-md-3">
+                <mat-form-field class="w-100">
+                    <mat-label>gender</mat-label>
+                    <input matInput placeholder="gender" formControlName="gender"
+                        [(ngModel)]="studentService.currentStudent.gender">
+                </mat-form-field>
+                <span *ngIf="studentForm.get('gender')?.invalid && studentForm.get('gender')?.touched"
+                    class="text-danger">
+                    Please Enter gender
+                </span>
+            </div>
+        </div>
 
-    <div class="col-md-3">
-        <mat-form-field class="w-100">
-            <mat-label>gender</mat-label>
-            <input matInput placeholder="gender" [(ngModel)]="studentService.currentStudent.gender">
-        </mat-form-field>
-    </div>
-</div>
+        <div class="row m-4">
+            <div class="col-md-3">
+                <mat-form-field class="w-100">
+                    <mat-label>birthdate</mat-label>
+                    <input matInput placeholder="birthdate" formControlName="birthdate"
+                        [(ngModel)]="studentService.currentStudent.birthdate">
+                </mat-form-field>
+                <span *ngIf="studentForm.get('birthdate')?.invalid && studentForm.get('birthdate')?.touched"
+                    class="text-danger">
+                    Please Enter birthdate
+                </span>
+            </div>
 
-<div class="row m-4">
-    <div class="col-md-3">
-        <mat-form-field class="w-100">
-            <mat-label>birthday</mat-label>
-            <input matInput placeholder="birthday" [(ngModel)]="studentService.currentStudent.birthdate">
-        </mat-form-field>
-    </div>
+            <div class="col-md-3">
+                <mat-form-field class="w-100">
+                    <mat-label>city</mat-label>
+                    <input matInput placeholder="city" formControlName="city"
+                        [(ngModel)]="studentService.currentStudent.city">
+                </mat-form-field>
+                <span *ngIf="studentForm.get('city')?.invalid && studentForm.get('city')?.touched" class="text-danger">
+                    Please Enter city
+                </span>
+            </div>
 
-    <div class="col-md-3">
-        <mat-form-field class="w-100">
-            <mat-label>city</mat-label>
-            <input matInput placeholder="city" [(ngModel)]="studentService.currentStudent.city">
-        </mat-form-field>
-    </div>
+            <div class="col-md-3">
+                <mat-form-field class="w-100">
+                    <mat-label>state</mat-label>
+                    <input matInput placeholder="state" formControlName="state"
+                        [(ngModel)]="studentService.currentStudent.state">
+                </mat-form-field>
+                <span *ngIf="studentForm.get('state')?.invalid && studentForm.get('state')?.touched"
+                    class="text-danger">
+                    Please Enter state
+                </span>
+            </div>
 
-    <div class="col-md-3">
-        <mat-form-field class="w-100">
-            <mat-label>state</mat-label>
-            <input matInput placeholder="state" [(ngModel)]="studentService.currentStudent.state">
-        </mat-form-field>
-    </div>
+            <div class="col-md-3">
+                <mat-form-field class="w-100">
+                    <mat-label>country</mat-label>
+                    <input matInput placeholder="country" formControlName="country"
+                        [(ngModel)]="studentService.currentStudent.country">
+                </mat-form-field>
+                <span *ngIf="studentForm.get('country')?.invalid && studentForm.get('country')?.touched"
+                    class="text-danger">
+                    Please Enter country
+                </span>
+            </div>
+        </div>
 
-    <div class="col-md-3">
-        <mat-form-field class="w-100">
-            <mat-label>country</mat-label>
-            <input matInput placeholder="country" [(ngModel)]="studentService.currentStudent.country">
-        </mat-form-field>
-    </div>
-</div>
+        <div class="row m-4">
+            <div class="col-md-3">
+                <mat-form-field class="w-100">
+                    <mat-label>zip</mat-label>
+                    <input matInput placeholder="zip" formControlName="zip"
+                        [(ngModel)]="studentService.currentStudent.zip">
+                </mat-form-field>
+                <span *ngIf="studentForm.get('zip')?.invalid && studentForm.get('zip')?.touched" class="text-danger">
+                    Please Enter zip
+                </span>
+            </div>
+        </div>
 
-<div class="row m-4">
-    <div class="col-md-3">
-        <mat-form-field class="w-100">
-            <mat-label>zip</mat-label>
-            <input matInput placeholder="zip" [(ngModel)]="studentService.currentStudent.zip">
-        </mat-form-field>
-    </div>
-</div>
 
-<div class="row col-md-6 m-4">
-    <div class="col-md-6">
-        <button mat-raised-button color="primary" class="w-100"
-            (click)="save(studentService.currentStudent)">SAVE</button>
-    </div>
 
-    <div class="col-md-6">
-        <button mat-raised-button color="yellow" (click)="clear()" class="w-100">CLEAR</button>
-    </div>
+        <div class="row col-md-6 m-4">
+            <div class="col-md-6">
+                <button mat-raised-button color="primary" class="w-100" [disabled]="studentForm?.invalid"
+                    (click)="save(studentService.currentStudent)">SAVE</button>
+            </div>
+
+            <div class="col-md-6">
+                <button mat-raised-button color="yellow" (click)="clear()" class="w-100">CLEAR</button>
+            </div>
+        </div>
+    </form>
 </div>

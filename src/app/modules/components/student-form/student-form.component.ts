@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { StudentModel } from 'src/app/model/student.model';
 import { StudentService } from 'src/app/services/student.service';
 import { Router } from '@angular/router'
+import { FormBuilder, FormGroup, FormGroupName, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-student-form',
@@ -10,9 +11,22 @@ import { Router } from '@angular/router'
 })
 export class StudentFormComponent implements OnInit {
 
+  studentForm: FormGroup = this.fb.group({
+    firstname: ['', Validators.required],
+    middlename: ['', Validators.required],
+    lastname: ['', Validators.required],
+    gender: ['', Validators.required],
+    birthdate: ['', Validators.required],
+    city: ['', Validators.required],
+    state: ['', Validators.required],
+    country: ['', Validators.required],
+    zip: ['', Validators.required]
+  })
+
   constructor(
     public studentService: StudentService,
-    private router: Router
+    private router: Router,
+    private fb: FormBuilder
   ) { }
 
   ngOnInit(): void {

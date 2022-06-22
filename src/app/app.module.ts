@@ -12,6 +12,7 @@ import { MatInputModule } from '@angular/material/input'
 import { MatButtonModule } from '@angular/material/button'
 import { SharedModule } from './shared/shared.module';
 import { StudentService } from './services/student.service';
+import { ReactiveFormsModule } from '@angular/forms'
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { StudentService } from './services/student.service';
     MatFormFieldModule,
     MatInputModule,
     SharedModule,
-    MatButtonModule
+    MatButtonModule,
+    ReactiveFormsModule
   ],
   providers: [
     StudentService
